@@ -29,8 +29,7 @@
             display: block;
             margin: 0 auto;
             /* Centraliza horizontalmente */
-            margin-bottom: 10px;
-            /* Reduz o espaço entre as imagens em telas menores */
+            margin-bottom: 10px; /* Reduz o espaço entre as imagens em telas menores */
         }
 
         header,
@@ -64,62 +63,40 @@
         /* Breakpoints para responsividade */
         @media (max-width: 768px) {
             #portfolio img {
-                margin-bottom: 5px;
-                /* Reduz ainda mais o espaço entre as imagens em telas menores */
+                margin-bottom: 5px; /* Reduz ainda mais o espaço entre as imagens em telas menores */
             }
 
             header,
             footer {
-                padding: 5px 0;
-                /* Reduz o preenchimento do cabeçalho e rodapé em telas menores */
+                padding: 5px 0; /* Reduz o preenchimento do cabeçalho e rodapé em telas menores */
             }
         }
 
         @media (max-width: 480px) {
             #portfolio img {
-                margin-bottom: 0;
-                /* Remove o espaço entre as imagens em telas muito pequenas */
+                margin-bottom: 0; /* Remove o espaço entre as imagens em telas muito pequenas */
             }
 
             header h1 {
-                font-size: 1.2em;
-                /* Reduz o tamanho da fonte do cabeçalho em telas muito pequenas (se você tiver um título) */
-            }
-        }
-
-        /* **Ajustes para Paisagem** */
-        @media (orientation: landscape) {
-            #portfolio {
-                flex-direction: row; /* Coloca as imagens em linha */
-                flex-wrap: wrap; /* Permite quebrar a linha */
-                justify-content: flex-start; /* Alinha à esquerda */
-                align-items: flex-start; /* Alinha ao topo */
-            }
-
-            #portfolio img {
-                width: calc(50% - 10px); /* Duas imagens por linha */
-                margin: 5px; /* Espaçamento menor */
-            }
-
-            main {
-                align-items: flex-start; /* Alinha o conteúdo ao topo */
+                font-size: 1.2em; /* Reduz o tamanho da fonte do cabeçalho em telas muito pequenas (se você tiver um título) */
             }
         }
     </style>
 </head>
 
 <body>
-    <header> </header>
+    <header>
+    </header>
     <main>
-        <section id="portfolio"> </section>
+        <section id="portfolio">
+        </section>
     </main>
     <footer>
         <p>© 2024 HOSLA. Todos os direitos reservados.</p>
     </footer>
     <script>
         const portfolioSection = document.getElementById('portfolio');
-        for (let i = 1; i <= 26; i++) {
-            // Alteração crucial: de 27 para 26
+        for (let i = 1; i <= 26; i++) { // Alteração crucial: de 27 para 26
             const img = document.createElement('img');
             img.src = `imagens/HOSLA-${i.toString().padStart(2, '0')}.png`;
             img.alt = `Página ${i}`;
