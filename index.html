@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio HOSLA</title>
+    <style>
+        /* Estilos inline para simplificar o teste */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* Garante que body e html ocupem a altura total */
+        }
+
+        #portfolio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            /* Ocupa a altura total */
+        }
+
+        #portfolio img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            /* Centraliza horizontalmente */
+        }
+
+        header,
+        footer {
+            text-align: center;
+            background-color: #f0f0f0;
+            /* Para visualizar header/footer */
+            padding: 10px 0;
+        }
+
+        main {
+            flex: 1;
+            /* Expande para preencher o espaço restante */
+            display: flex;
+            align-items: center;
+            /* Centraliza verticalmente */
+            justify-content: center;
+            /* Centraliza horizontalmente */
+        }
+
+        header {
+            background-color: #ddd;
+            /* Cor diferente para testar */
+        }
+
+        footer {
+            background-color: #ddd;
+            /* Cor diferente para testar */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <section id="portfolio">
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 HOSLA. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        const portfolioSection = document.getElementById('portfolio');
+        for (let i = 1; i <= 26; i++) { // Alteração crucial: de 27 para 26
+            const img = document.createElement('img');
+            img.src = `imagens/HOSLA-${i.toString().padStart(2, '0')}.png`;
+            img.alt = `Página ${i}`;
+            portfolioSection.appendChild(img);
+        }
+    </script>
+</body>
+
+</html>
